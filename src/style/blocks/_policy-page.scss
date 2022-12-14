@@ -1,4 +1,4 @@
-.policy-page {
+.rules-page {
   & a {
 
     &:hover,
@@ -12,6 +12,30 @@
     padding: 0;
     line-height: 1.5;
     list-style: none;
+  }
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    row-gap: 4px;
+
+    & > li {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--accent);
+      }
+    }
   }
 
   & > ol {
@@ -51,32 +75,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-
-.rules-page {
-  & ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    row-gap: 4px;
-
-    & > li {
-      position: relative;
-      padding-left: 20px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        left: 4px;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: var(--accent);
       }
     }
   }
