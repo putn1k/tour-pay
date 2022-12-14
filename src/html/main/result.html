@@ -1,0 +1,74 @@
+<section class="search-result is-hidden" id="search-result">
+  <div class="container">
+    <h2 class="indent-reset hd hd--h2 search-result__title"></h2>
+    <p class="indent-reset search-result__text"></p>
+    <ul class="list-reset search-result__list is-hidden" id="search-result-list">
+    </ul>
+  </div>
+</section>
+
+<template id="search-variant-template">
+  <li class="search-room">
+    <div class="search-room__title">
+      <h3 class="indent-reset search-room__hotel"></h3>
+      <p class="indent-reset small">Категория номера:<br> <span class="hd hd--h3 search-room__cat"></span></p>
+    </div>
+    <div>
+      <p class="indent-reset">Проживание с <span class="search-room__arrival"></span> по <span class="search-room__departure"></span></p>
+      <p class="indent-reset">Питание: <span class="search-room__feed"></span></p>
+    </div>
+    <p class="indent-reset search-room__price">Стоимость: <span class="search-room__price-value"></span> руб.</p>
+    <button class="btn-reset btn btn--small search-room__btn" type="button" data-hystmodal="#order-modal">Выбрать</button>
+  </li>
+</template>
+
+<div class="hystmodal hystmodal--simple" id="order-modal" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+      <div class="modal">
+        <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
+          <svg class="modal__close-icon" width="18" height="18" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="indent-reset hd hd--h2 modal__title">Забронировать</h2>
+        <form class="form order-form" id="booking-form" data-validate>
+          <input type="hidden" name="Отель" id="booking-hotel">
+          <input type="hidden" name="Вариант&nbsp;размещения" id="booking-room">
+          <input type="hidden" name="Дата&nbsp;заезда" id="booking-arrival-date">
+          <input type="hidden" name="Дата&nbsp;выезда" id="booking-departure-date">
+          <input type="hidden" name="Количество&nbsp;гостей" id="booking-guests">
+          <input type="hidden" name="Количество&nbsp;детей" id="booking-children">
+          <input type="hidden" name="Питание" id="booking-feed">
+          <input type="hidden" name="Стоимость" id="booking-price">
+          <button class="btn-reset order-form__details-title order-form__details-handler" type="button" aria-expanded="true" data-hinter-handler="order-list">Детали заказа</button>
+          <div class="order-form__details anim-fade-left" aria-hidden="false" data-hinter-list="order-list">
+            <p class="indent-reset small">Отель: <span class="order-form__details-value" id="order-hotel"></span></p>
+            <p class="indent-reset small">Вариант размещения: <span class="order-form__details-value" id="order-cat"></span></p>
+            <p class="indent-reset small">Заезд: <span class="order-form__details-value" id="order-arrival"></span></p>
+            <p class="indent-reset small">Выезд: <span class="order-form__details-value" id="order-departure"></span></p>
+            <p class="indent-reset small">Количество гостей: <span class="order-form__details-value" id="order-guests"></span></p>
+            <p class="indent-reset small">Количество детей: <span class="order-form__details-value" id="order-children"></span></p>
+            <p class="indent-reset small">Питание: <span class="order-form__details-value" id="order-feed"></span></p>
+            <p class="indent-reset small">Стоимость: <span class="order-form__details-value" id="order-price"></span> руб.</p>
+          </div>
+          <div class="order-form__fields">
+            <div>
+              <input class="form__input" type="text" name="Контактное&nbsp;лицо" placeholder="Ваше имя" data-validate="text" required>
+            </div>
+            <div>
+              <input class="form__input" type="tel" name="Контактный&nbsp;телефон" placeholder="Контактный телефон" data-validate="phone" required>
+            </div>
+            <div>
+              <input class="form__input" type="email" name="Эл.&nbsp; почта" placeholder="Эл. почта" data-validate="email" required>
+            </div>
+            <div class="order-form__submit">
+              <button class="btn-reset btn" type="submit">Забронировать</button>
+            </div>
+          </div>
+          @include('../confirm-field.html')
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

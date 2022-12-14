@@ -1,0 +1,118 @@
+.hero {
+  padding: 120px 0;
+  min-height: 568px;
+  color: var(--white);
+  background-color: var(--black50);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+
+  &__title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+  }
+
+  &__descr {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__rating {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      z-index: 1;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.83 6.74108L12.3239 10.1036L13.1519 14.8526C13.1879 15.0603 13.1012 15.2702 12.9279 15.3942C12.8299 15.4646 12.7134 15.5 12.5969 15.5C12.5074 15.5 12.4173 15.479 12.3352 15.4363L8 13.1941L3.66539 15.4358C3.47627 15.5343 3.24606 15.5183 3.0727 15.3937C2.89933 15.2696 2.81265 15.0598 2.84868 14.8521L3.67665 10.103L0.170011 6.74108C0.0169126 6.59378 -0.0388108 6.37338 0.027607 6.17347C0.0940249 5.97356 0.270201 5.82681 0.4824 5.79636L5.32809 5.10415L7.49511 0.783667C7.6848 0.405444 8.3152 0.405444 8.50489 0.783667L10.6719 5.10415L15.5176 5.79636C15.7298 5.82681 15.906 5.97301 15.9724 6.17347C16.0388 6.37394 15.9831 6.59323 15.83 6.74108V6.74108Z' fill='%23edd003'/%3E%3C/svg%3E%0A");
+      background-repeat: repeat-x;
+      transform: translateX(-50%);
+    }
+
+    &--2 {
+      &::before {
+        width: calc(2 * 16px);
+      }
+    }
+
+    &--3 {
+      &::before {
+        width: calc(3 * 16px);
+      }
+    }
+
+    &--4 {
+      &::before {
+        width: calc(4 * 16px);
+      }
+    }
+
+    &--5 {
+      &::before {
+        width: calc(5 * 16px);
+      }
+    }
+  }
+
+  &__booking {
+
+    & > span {
+      position: relative;
+      display: inline-block;
+      padding-left: 14px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.83 6.74108L12.3239 10.1036L13.1519 14.8526C13.1879 15.0603 13.1012 15.2702 12.9279 15.3942C12.8299 15.4646 12.7134 15.5 12.5969 15.5C12.5074 15.5 12.4173 15.479 12.3352 15.4363L8 13.1941L3.66539 15.4358C3.47627 15.5343 3.24606 15.5183 3.0727 15.3937C2.89933 15.2696 2.81265 15.0598 2.84868 14.8521L3.67665 10.103L0.170011 6.74108C0.0169126 6.59378 -0.0388108 6.37338 0.027607 6.17347C0.0940249 5.97356 0.270201 5.82681 0.4824 5.79636L5.32809 5.10415L7.49511 0.783667C7.6848 0.405444 8.3152 0.405444 8.50489 0.783667L10.6719 5.10415L15.5176 5.79636C15.7298 5.82681 15.906 5.97301 15.9724 6.17347C16.0388 6.37394 15.9831 6.59323 15.83 6.74108V6.74108Z' fill='%23edd003'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 150px;
+    min-height: 600px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__descr {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media-min ($lg) {
+    padding-top: 160px;
+    min-height: 640px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 180px;
+    min-height: 768px;
+  }
+}

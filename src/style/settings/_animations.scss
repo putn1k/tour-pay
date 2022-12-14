@@ -1,0 +1,78 @@
+.anim-small-drop {
+  animation-duration: .5s;
+  animation-name: small-drop;
+}
+
+.anim-fade-down {
+  animation-name: fade-down;
+  animation-fill-mode: forwards;
+  animation-duration: .2s;
+}
+
+.anim-fade-left {
+  animation-name: fade-left;
+  animation-fill-mode: forwards;
+  animation-duration: .4s;
+}
+
+.anim-fade-up {
+  animation-name: fade-up;
+  animation-fill-mode: forwards;
+  animation-duration: .4s;
+}
+
+@keyframes small-drop {
+  0% {
+    transform: translate(0, -100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translate(0, -5%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translate(-10%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translate(0, -10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

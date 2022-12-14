@@ -1,0 +1,62 @@
+<div class="hystmodal hystmodal--simple" id="callback-modal" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+      <div class="modal">
+        <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
+          <svg class="modal__close-icon" width="18" height="18" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="indent-reset hd hd--h2 modal__title">Заказать звонок</h2>
+        <form class="modal__cb-form form" id="callback-modal-form" data-validate>
+          <input type="hidden" name="Страница" value="Название страницы">
+          <input type="hidden" name="Форма" value="Заказать звонок">
+          <div>
+            <input class="form__input" type="text" name="Имя" placeholder="Ваше имя" data-validate="text" required>
+          </div>
+          <div>
+            <input class="form__input" type="tel" name="Телефон" placeholder="+7 (---) --- -- --" data-validate="phone" required>
+          </div>
+          <div class="modal__submit">
+            <button class="btn-reset btn modal__submit-btn" type="submit">Отправить</button>
+          </div>
+          @include('confirm-field.html')
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal hystmodal--simple" id="send-ok-modal" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+      <div class="modal">
+        <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
+          <svg class="modal__close-icon" width="14" height="14" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="hd hd--h3 modal__title">Ваша заявка отправлена!</h2>
+        <p>Мы свяжемся с вами для уточнения деталей.</p>
+        <button class="btn-reset btn btn--small btn--good" type="button" data-hystclose>Хорошо</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal hystmodal--simple" id="send-error-modal" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+      <div class="modal">
+        <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
+          <svg class="modal__close-icon" width="14" height="14" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="hd hd--h3 modal__title">Ошибка!</h2>
+        <p>Произошел сбой на сервере. Попробуйте повторить попытку позже.</p>
+        <button class="btn-reset btn btn--small btn--error" type="button" data-hystclose>Ok</button>
+      </div>
+    </div>
+  </div>
+</div>

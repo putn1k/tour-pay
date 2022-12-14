@@ -1,0 +1,94 @@
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.hd {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  font-family: $alt-font, 'Times New Roman', serif;
+
+  &--h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  &--h2 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  &--h3 {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  &--h4 {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+}
+
+.small {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+@include media-min ($xl) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .hd {
+    font-size: 34px;
+
+    &--h1 {
+      font-size: 28px;
+    }
+
+    &--h2 {
+      font-size: 24px;
+    }
+
+    &--h3 {
+      font-size: 20px;
+    }
+
+    &--h4 {
+      font-size: 20px;
+    }
+  }
+
+  .w-90 {
+    width: 90%;
+  }
+}

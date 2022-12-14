@@ -1,0 +1,83 @@
+.calc-form {
+  display: grid;
+  gap: 12px;
+  max-width: 290px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: grid;
+    gap: 12px;
+    align-items: start;
+  }
+
+  &__date-wrapper {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    z-index: 1;
+  }
+
+  &__input {
+    padding: 22px 8px 4px;
+    color: var(--white);
+    background-color: var(--black50);
+    border: 1px solid var(--white50);
+    border-radius: 6px;
+    outline: none;
+
+    &::placeholder {
+      font-size: 12px;
+      color: var(--white);
+    }
+  }
+
+  &__btn {
+    padding: 12px 24px;
+    font-size: 14px;
+
+    &--submit {
+      margin-top: 12px;
+    }
+  }
+
+  @include media-min ($sm) {
+    max-width: 430px;
+
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__btn {
+      &--submit {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    max-width: 560px;
+  }
+
+  @include media-min ($lg) {
+    max-width: 720px;
+    gap: 20px;
+
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    &__btn {
+      &--submit {
+        padding: 16px 32px;
+        grid-column: span 3;
+        justify-self: center;
+        margin-top: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<header class="header @if(context.page === 'main') {header--abs}">
+  <div class="header__top">
+    <div class="header__top-wrapper container">
+      <div class="header__logo header-logo">
+        <a class="header-logo__link" href="page-main.html">
+          <img class="header-logo__img" src="img/logo.svg" width="40" alt="">
+        </a>
+        <span class="header-logo__text">Великолепное место для комфорта и&nbsp;отдыха в&nbsp;окружении горных вершин</span>
+      </div>
+      <nav class="header__nav">
+        <ul class="list-reset header__nav-list">
+          <li class="@if(context.page === 'main') {current-menu-item}">
+            <a href="page-main.html">Главная</a>
+          </li>
+          <li class="@if(context.page === 'apartaments') {current-menu-item}">
+            <a href="page-apartaments.html">Номера</a>
+          </li>
+          <li class="@if(context.page === 'gallery') {current-menu-item}">
+            <a href="page-gallery.html">Галерея</a>
+          </li>
+          <li class="@if(context.page === 'contacts') {current-menu-item}">
+            <a href="page-contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contacts">
+        <a class="header__tel" href="tel:88007002341">8(800)700-23-41</a>
+        <button class="btn-reset btn btn--outlined header__btn-cb" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+      <a class="header__phone-link" href="tel:88007002341">
+        <svg class="header__phone-icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
+        </svg>
+        <span class="hd hd--h3 header__phone-text">8(800)700-23-41</span>
+      </a>
+      <button class="header__burger just-burger" type="button" aria-label="Меню" id="justBurger">
+        <svg class="just-burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+          <path class="just-burger__line just-burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+          <path class="just-burger__line just-burger__line--middle" d="m 7,25 h 36" />
+          <path class="just-burger__line just-burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  @if(context.page === 'main') { @include('mobile-menu.html', {"page":"main"}) }
+  @if(context.page === 'apartaments') { @include('mobile-menu.html', {"page":"apartaments"}) }
+  @if(context.page === 'gallery') { @include('mobile-menu.html', {"page":"gallery"}) }
+  @if(context.page === 'contacts') { @include('mobile-menu.html', {"page":"contacts"}) }
+  @if(!context.page) { @include('mobile-menu.html') }
+</header>

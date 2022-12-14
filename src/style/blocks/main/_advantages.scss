@@ -1,0 +1,20 @@
+.main-advantages {
+  display: grid;
+  row-gap: 12px;
+
+  & > li {
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+  }
+}

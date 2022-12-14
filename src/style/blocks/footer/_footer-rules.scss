@@ -1,0 +1,27 @@
+.footer-rules {
+  display: grid;
+  justify-items: center;
+  row-gap: 12px;
+
+  &__links {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include media-min($md) {
+    justify-items: start;
+  }
+
+  @include media-min($xl) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -8px;
+    row-gap: 0;
+
+    & > * {
+      margin: 8px;
+    }
+  }
+}

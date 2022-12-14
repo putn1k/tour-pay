@@ -1,0 +1,26 @@
+<div class="mobile-menu" aria-expanded="false">
+  <div class="mobile-menu__content">
+    <div class="container">
+      <nav>
+        <ul class="list-reset mobile-menu__list">
+          <li class="@if(context.page === 'main') {current-menu-item}">
+            <a href="page-main.html">Главная</a>
+          </li>
+          <li class="@if(context.page === 'apartaments') {current-menu-item}">
+            <a href="page-apartaments.html">Номера</a>
+          </li>
+          <li class="@if(context.page === 'gallery') {current-menu-item}">
+            <a href="page-gallery.html">Галерея</a>
+          </li>
+          <li class="@if(context.page === 'contacts') {current-menu-item}">
+            <a href="page-contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu__contacts">
+        <a class="mobile-menu__tel" href="tel:88007002341">8(800)700-23-41</a>
+        <button class="btn-reset btn btn--outlined" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </div>
+</div>

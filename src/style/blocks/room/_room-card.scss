@@ -1,0 +1,26 @@
+.room-card {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+  }
+
+  &__link {
+    padding: 8px;
+  }
+}

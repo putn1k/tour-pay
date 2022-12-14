@@ -1,0 +1,777 @@
+{
+    "code": 200,
+    "data": {
+        "hotels": [
+            {
+                "id": 168,
+                "currencyId": 1,
+                "currencyCode": "RUB",
+                "timeData": {
+                    "chargeTime": "12:00",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "12:00"
+                },
+                "tariffs": [
+                    {
+                        "id": 17723,
+                        "feedTypeId": 2,
+                        "spoTypeId": null,
+                        "spoValue": null,
+                        "spoDescription": null
+                    },
+                    {
+                        "id": 17724,
+                        "feedTypeId": 2,
+                        "spoTypeId": 12,
+                        "spoValue": null,
+                        "spoDescription": null
+                    }
+                ],
+                "charges": [
+                    {
+                        "id": 0,
+                        "name": {
+                            "ru": "Штраф 100% за весь период при отмене бронирования.",
+                            "en": "Penalty of 100% for all days at booking cancellation."
+                        },
+                        "minTime": null,
+                        "chargeSum": 100,
+                        "isPercent": true,
+                        "isOneNightOnly": false,
+                        "periods": []
+                    },
+                    {
+                        "id": 3077,
+                        "name": {
+                            "ru": "Штраф 100% за первые сутки при отмене бронирования менее, чем за 1 сутки (24 часа) до 12:00 дня заезда.",
+                            "en": "Penalty 100% for the first nightfor booking cancellation less, then 1 day (24 hours) before 12:00 of check-in day."
+                        },
+                        "minTime": 24,
+                        "chargeSum": 100,
+                        "isPercent": true,
+                        "isOneNightOnly": true,
+                        "periods": [
+                            {
+                                "startDate": "2022-01-10",
+                                "endDate": "2022-12-29",
+                                "weekDays": []
+                            },
+                            {
+                                "startDate": "2023-01-09",
+                                "endDate": "2023-03-31",
+                                "weekDays": []
+                            }
+                        ]
+                    }
+                ],
+                "services": null,
+                "results": [
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 19057,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 42309.42,
+                                        "EUR": 698.8,
+                                        "USD": 691.54
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 4230.94,
+                                        "EUR": 69.88,
+                                        "USD": 69.15
+                                    },
+                                    "commissionPercent": 9.9999952729203,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 108,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 19057,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 45925,
+                                        "EUR": 758.52,
+                                        "USD": 750.64
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 4592.5,
+                                        "EUR": 75.85,
+                                        "USD": 75.06
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 108,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 16946,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 49307.06,
+                                        "EUR": 814.38,
+                                        "USD": 805.92
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 4930.71,
+                                        "EUR": 81.44,
+                                        "USD": 80.59
+                                    },
+                                    "commissionPercent": 10.000008112429,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 81,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 16946,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 53525,
+                                        "EUR": 884.04,
+                                        "USD": 874.86
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 5352.5,
+                                        "EUR": 88.4,
+                                        "USD": 87.49
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 81,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 783,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 56676.46,
+                                        "EUR": 936.09,
+                                        "USD": 926.37
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 5667.65,
+                                        "EUR": 93.61,
+                                        "USD": 92.64
+                                    },
+                                    "commissionPercent": 10.000007057604,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 19,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 783,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 61525,
+                                        "EUR": 1016.17,
+                                        "USD": 1005.62
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 6152.5,
+                                        "EUR": 101.62,
+                                        "USD": 100.56
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 19,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 31206,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 77311.77,
+                                        "EUR": 1276.91,
+                                        "USD": 1263.65
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 7731.18,
+                                        "EUR": 127.69,
+                                        "USD": 126.36
+                                    },
+                                    "commissionPercent": 10.000003880392,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 16,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 31206,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 2,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 2,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 1,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 83925,
+                                        "EUR": 1386.14,
+                                        "USD": 1371.74
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 8392.5,
+                                        "EUR": 138.61,
+                                        "USD": 137.17
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 16,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 786,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 3,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 3,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 0,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 113791.77,
+                                        "EUR": 1879.43,
+                                        "USD": 1859.91
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 11379.18,
+                                        "EUR": 187.94,
+                                        "USD": 185.99
+                                    },
+                                    "commissionPercent": 10.000002636395,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 4,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 786,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 3,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 3,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 0,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 123525,
+                                        "EUR": 2040.19,
+                                        "USD": 2019
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 12352.5,
+                                        "EUR": 204.02,
+                                        "USD": 201.9
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 4,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 787,
+                            "tariffId": 17724,
+                            "amount": 1,
+                            "adults": 3,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 3,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 0,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 128530.58,
+                                        "EUR": 2122.87,
+                                        "USD": 2100.81
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 12853.06,
+                                        "EUR": 212.29,
+                                        "USD": 210.08
+                                    },
+                                    "commissionPercent": 10.00000155605,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": true
+                                }
+                            },
+                            "amountMax": 12,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17724,
+                                    "chargeIds": [
+                                        0
+                                    ],
+                                    "usedChargeId": 0,
+                                    "isRefundable": false,
+                                    "isHardNotRefundable": true,
+                                    "chargeDate": "2022-11-28T11:50:52+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 787,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 3,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 3,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 0,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 139525,
+                                        "EUR": 2304.45,
+                                        "USD": 2280.51
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 13952.5,
+                                        "EUR": 230.45,
+                                        "USD": 228.05
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 12,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ],
+                    [
+                        {
+                            "hotelId": 168,
+                            "roomId": 791,
+                            "tariffId": 17723,
+                            "amount": 1,
+                            "adults": 3,
+                            "childAges": [],
+                            "isOnRequest": false,
+                            "childAgesWithoutPlace": [],
+                            "adultPlaces": 3,
+                            "additionalPlaces": 0,
+                            "childPlaces": 0,
+                            "childWithoutPlace": 0,
+                            "prices": {
+                                "total": {
+                                    "isSpecialCommission": false,
+                                    "prices": {
+                                        "RUB": 300125,
+                                        "EUR": 4956.99,
+                                        "USD": 4905.49
+                                    },
+                                    "commissionPrices": {
+                                        "RUB": 30012.5,
+                                        "EUR": 495.7,
+                                        "USD": 490.55
+                                    },
+                                    "commissionPercent": 10,
+                                    "parentPrice": {
+                                        "RUB": 0,
+                                        "EUR": 0,
+                                        "USD": 0
+                                    },
+                                    "isSpecialPrice": false
+                                }
+                            },
+                            "amountMax": 1,
+                            "charges": [
+                                {
+                                    "startDate": "2022-12-10",
+                                    "endDate": "2022-12-14",
+                                    "tariffId": 17723,
+                                    "chargeIds": [
+                                        3077
+                                    ],
+                                    "usedChargeId": 3077,
+                                    "isRefundable": true,
+                                    "isHardNotRefundable": false,
+                                    "chargeDate": "2022-12-09T09:00:00+00:00"
+                                }
+                            ],
+                            "serviceIds": []
+                        }
+                    ]
+                ]
+            }
+        ]
+    },
+    "apiVersion": "1.0",
+    "datetime": "2022-11-28T08:50:53+00:00"
+}

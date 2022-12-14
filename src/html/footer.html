@@ -1,0 +1,52 @@
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__logo footer-logo">
+      <a class="footer-logo__link" href="page-main.html">
+        <img class="footer-logo__img" src="img/logo.svg" width="50" alt="">
+      </a>
+      <span class="footer-logo__text">Великолепное место для комфорта и&nbsp;отдыха в&nbsp;окружении горных вершин</span>
+    </div>
+    <div class="footer__contacts footer-contacts">
+      <div class="footer-contacts__adress">
+        <span>
+          <svg class="footer-contacts__pin" width="26" height="26" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-pin"></use>
+          </svg>
+          Красная Поляна, наб. Времена года, д 1</span>
+      </div>
+      <div class="footer-contacts__bottom">
+        <a class="footer-contacts__tel" href="tel:88007002341">8(800)700-23-41</a>
+        <button class="btn-reset btn footer-contacts__cb" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+    </div>
+    <div class="footer__rules footer-rules">
+      <a class="small footer-rules__links" href="page-policy.html">Политика конфиденциальности</a>
+      <a class="small footer-rules__links" href="page-rules.html">Правила и условия бронирования</a>
+      <a class="small footer-rules__links" href="page-offer.html">Отказ от ответственности</a>
+    </div>
+    <ul class="list-reset footer__pay">
+      <li>
+        <span class="visually-hidden">сбербанк</span>
+        <img src="img/paysystems/sberbank.png" alt="" aria-hidden="true">
+      </li>
+      <li>
+        <span class="visually-hidden">мир</span>
+        <img src="img/paysystems/mir.png" alt="" aria-hidden="true">
+      </li>
+      <li>
+        <span class="visually-hidden">виза</span>
+        <img src="img/paysystems/visa.png" alt="" aria-hidden="true">
+      </li>
+      <li>
+        <span class="visually-hidden">мастеркард</span>
+        <img src="img/paysystems/mastercard.png" alt="" aria-hidden="true">
+      </li>
+    </ul>
+    <div class="small footer__copyright">
+      <span>&copy; 2022 Tour-Pay</span>
+    </div>
+  </div>
+</footer>
+@include('scroll-top.html')
+@include('modal.html')
+@include('loader.html')

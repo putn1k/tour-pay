@@ -1,0 +1,24 @@
+<section class="callback">
+  <div class="container">
+    <div class="callback__content">
+      <h2 class="indent-reset hd hd--h2 callback__title">Остались вопросы?</h2>
+      <p class="indent-reset callback__descr">Оставьте заявку и наш менеджер свяжится с Вами!</p>
+      <form class="form callback__form" id="callback-form" data-validate>
+        <input type="hidden" name="Страница" value="Главная">
+        <input type="hidden" name="Форма" value="Остались вопросы?">
+        <div>
+          <input class="form__input" type="text" name="Контактное&nbsp;лицо" placeholder="Ваше имя" data-validate="text" required>
+        </div>
+        <div>
+          <input class="form__input" type="tel" name="Контактный&nbsp;телефон" placeholder="Контактный телефон" data-validate="phone" required>
+        </div>
+        <div class="callback__submit">
+          <button class="btn-reset btn btn--outlined callback__submit-btn" type="submit">Отправить</button>
+        </div>
+        <div class="callback__bottom">
+          @include('confirm-field.html')
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--black70);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  &__big {
+    margin-bottom: 40px;
+    font-size: 110px;
+    color: var(--accent);
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($md) {
+    &__big {
+      font-size: 140px;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__big {
+      font-size: 160px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.apartaments {
+  display: grid;
+  gap: 30px;
+
+  @include media-min ($md) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  @include media-min ($xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

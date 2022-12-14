@@ -1,0 +1,11 @@
+.main-offer {
+  padding-bottom: 24px;
+
+  @include media-min ($md) {
+    padding-bottom: 32px;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,41 @@
+.main-rooms {
+  padding: 24px 0;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    padding: 32px 0;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 40px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  &[aria-expanded="true"] {
+    pointer-events: auto;
+
+    & .mobile-menu__content {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    color: var(--black);
+    background-color: var(--white);
+    overflow: auto;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform .2s ease-in-out;
+  }
+
+  &__list {
+    display: grid;
+    justify-items: center;
+    row-gap: 16px;
+    margin-bottom: 40px;
+
+    & > li {
+      position: relative;
+
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 2px;
+          background-color: var(--accent);
+        }
+      }
+
+      &.current-menu-item {
+
+        & > a,
+        & > span {
+          color: var(--accent);
+        }
+      }
+    }
+
+    & a {
+      color: var(--black);
+      font-size: 28px;
+      text-decoration: none;
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    justify-items: center;
+    row-gap: 16px;
+  }
+
+  &__tel {
+    font-size: 20px;
+  }
+
+  @include media-min ($xl) {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения общих компонентов страниц
+@import "blocks/buttons";
+@import "blocks/form";
+@import "blocks/breadcrumbs";
+@import "blocks/inner-page";
+@import "blocks/scroll-top";
+@import "blocks/map";
+@import "blocks/loader";
+@import "blocks/modal";
+@import "blocks/yt-video";
+@import "blocks/callback";
+@import "blocks/slider";
+@import "blocks/header/index";
+@import "blocks/footer/index";
+@import "blocks/not-found";
+@import "blocks/fullheight-block";
+@import "blocks/policy-page";
+
+// подключения стилей страниц
+@import "blocks/main/index";
+@import "blocks/apartaments/index";
+@import "blocks/room/index";
+@import "blocks/gallery/index";
+@import "blocks/contacts/index";

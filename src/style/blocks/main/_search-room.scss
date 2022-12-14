@@ -1,0 +1,40 @@
+.search-room {
+  display: grid;
+  row-gap: 8px;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  padding: 16px;
+  transition: box-shadow .15s ease-in-out;
+
+  &__hotel {
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0 0 15px 3px var(--black20);
+  }
+
+  @include media-min ($sm) {
+    justify-items: start;
+  }
+
+  @include media-min ($lg) {
+    grid-template-columns: 1fr auto;
+
+    &__price {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    &__btn {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      justify-self: end;
+    }
+  }
+}

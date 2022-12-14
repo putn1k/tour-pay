@@ -1,0 +1,144 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 540px;
+
+  @include media-min ($md) {
+    max-width: 690px;
+  }
+
+  @include media-min ($lg) {
+    max-width: 940px;
+  }
+
+  @include media-min ($xl) {
+    max-width: 1110px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-open-menu,
+.is-loading {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.indent-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-hover-effect {
+  overflow: hidden;
+  border-radius: 4px;
+
+  & > a {
+    position: relative;
+    display: flex;
+    height: 100%;
+    outline: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      background-color: transparent;
+      pointer-events: none;
+      transition: background-color .2s ease-in-out;
+    }
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='52px' height='52px' viewBox='0 0 52 52' enable-background='new 0 0 52 52' xml:space='preserve'%3E%3Cpath d='M26,20c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S30.4,20,26,20z' fill='white' /%3E%3Cpath d='M46,14h-5.2c-1.4,0-2.6-0.7-3.4-1.8l-2.3-3.5C34.4,7,32.7,6,30.9,6h-9.8c-1.8,0-3.5,1-4.3,2.7l-2.3,3.5 c-0.7,1.1-2,1.8-3.4,1.8H6c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V18C50,15.8,48.2,14,46,14z M26,40 c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S32.6,40,26,40z' fill='white' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: var(--black70);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.theme-red {
+  --accent: var(--red);
+  --accent-btn: var(--white);
+  --accent-btn-second: var(--red);
+  --accent-hov: var(--red-hov);
+  --accent-act: var(--red-act);
+}
+
+.theme-yellow {
+  --accent: var(--yellow);
+  --accent-btn: var(--gray);
+  --accent-btn-second: var(--gray);
+  --accent-hov: var(--yellow-hov);
+  --accent-act: var(--yellow-act);
+}
+
+.theme-green {
+  --accent: var(--green);
+  --accent-btn: var(--white);
+  --accent-btn-second: var(--green);
+  --accent-hov: var(--green-hov);
+  --accent-act: var(--green-act);
+}

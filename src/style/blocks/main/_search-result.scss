@@ -1,0 +1,16 @@
+.search-result {
+  padding-top: 65px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+}

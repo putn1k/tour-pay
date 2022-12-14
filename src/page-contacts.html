@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/meta.html')
+  <title>Page title</title>
+</head>
+
+<body class="indent-reset theme-red">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site-container">
+    @include('html/header.html', {"page":"contacts"})
+    @include('html/breadcrumbs.html', {"page":"contacts"})
+    <main>
+      @include('html/contacts/index.html')
+    </main>
+    @include('html/footer.html')
+  </div>
+  @include('html/y-maps-scripts.html')
+  @include('html/scripts.html')
+</body>
+
+</html>

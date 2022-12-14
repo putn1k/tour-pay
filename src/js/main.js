@@ -1,0 +1,9 @@
+import './modules/header.js';
+import './modules/modal.js';
+import './modules/forms.js';
+import './modules/scroll-top.js';
+import './modules/yt-video.js';
+import './modules/hinter.js';
+import './modules/full-height.js';
+import './modules/map.js';
+import './modules/room.js';

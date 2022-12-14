@@ -1,0 +1,27 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    margin-right: 12px;
+  }
+
+  &__img {
+    display: block;
+    width: 40px;
+  }
+
+  &__text {
+    display: none;
+  }
+
+  @include media-min($md) {
+    &__text {
+      font-family: $alt-font, 'Times New Roman', serif;
+      display: block;
+      max-width: 265px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  &__link {
+    text-decoration: none;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    display: block;
+    width: 50px;
+  }
+
+  &__text {
+    font-family: $alt-font, 'Times New Roman', serif;
+    display: block;
+    max-width: 300px;
+    font-size: 12px;
+  }
+
+  @include media-min ($md) {
+    display: grid;
+    justify-items: start;
+    align-self: start;
+    row-gap: 12px;
+
+    &__img {
+      width: 60px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

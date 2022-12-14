@@ -1,0 +1,24 @@
+.child-item {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+
+  &__remove {
+    &::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 20px;
+      line-height: 1;
+      width: 24px;
+      height: 24px;
+      background-color: var(--red);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

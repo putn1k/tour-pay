@@ -1,0 +1,57 @@
+.footer-contacts {
+  display: grid;
+  row-gap: 12px;
+
+
+  &__adress {
+    width: 300px;
+    margin: 0 auto;
+
+    & > span {
+      position: relative;
+    }
+  }
+
+  &__pin {
+    position: absolute;
+    left: -30px;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    color: var(--accent);
+  }
+
+  &__bottom {
+    display: grid;
+    row-gap: 12px;
+    justify-items: center;
+  }
+
+  &__tel {
+    font-size: 20px;
+    color: currentColor;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  @include media-min ($md) {
+
+    &__adress {
+      margin: 0;
+      width: auto;
+
+      & > span {
+        display: block;
+      }
+    }
+
+    &__bottom {
+      justify-items: start;
+    }
+  }
+}

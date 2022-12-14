@@ -1,0 +1,65 @@
+.footer {
+  padding: 40px 0;
+  color: var(--white);
+  background-color: var(--gray);
+
+  &__container {
+    display: grid;
+    row-gap: 30px;
+    text-align: center;
+  }
+
+  &__logo {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  &__pay {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+    gap: 10px;
+    width: 215px;
+    margin: 0 auto;
+
+    & img {
+      display: block;
+    }
+  }
+
+  @include media-min($md) {
+    &__container {
+      text-align: left;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__contacts {
+      padding-top: 6px;
+    }
+
+    &__pay {
+      margin: 0;
+    }
+  }
+
+  @include media-min($xl) {
+    &__rules {
+      grid-column: span 2;
+    }
+
+    &__pay {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &__copyright {
+      text-align: right;
+      align-self: end;
+    }
+  }
+}

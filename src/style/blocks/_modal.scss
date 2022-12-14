@@ -1,0 +1,62 @@
+.modal {
+  position: relative;
+  margin: 0 15px;
+  padding: 24px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 8px;
+  max-width: 330px;
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: var(--gray);
+    cursor: pointer;
+    transition: color .15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: var(--light-gray);
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__cb-form {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__search-options {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__submit {
+    padding-top: 12px;
+  }
+
+  &__apply {
+    margin-top: 12px;
+  }
+
+  @include media-min ($md) {
+    max-width: 540px;
+
+    &--search-options {
+      min-width: 640px;
+    }
+
+    &__apply {
+      justify-self: start;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 36px;
+  }
+}

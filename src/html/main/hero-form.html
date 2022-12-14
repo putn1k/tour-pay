@@ -1,0 +1,95 @@
+<form class="form hero__form calc-form" id="calc-form" data-validate>
+  <div class="calc-form__wrapper">
+    <div class="calc-form__date-wrapper">
+      <label class="small calc-form__label" for="arrival-date">Дата заезда:</label>
+      <input class="form__input calc-form__input" type="text" name="Прибытие" id="arrival-date" autocomplete="off" data-validate="date-arr" placeholder="Выберите дату" required>
+    </div>
+    <div class="calc-form__date-wrapper">
+      <label class="small calc-form__label" for="departure-date">Дата выезда:</label>
+      <input class="form__input calc-form__input" type="text" name="Выезд" id="departure-date" autocomplete="off" placeholder="Выберите дату" data-validate="date-dep" required>
+    </div>
+
+    <button class="btn-reset btn calc-form__btn" type="button" data-hystmodal="#search-options-modal">Параметры поиска</button>
+    <button class="btn-reset btn calc-form__btn calc-form__btn--submit" type="submit">Узнать цену</button>
+  </div>
+
+  <div class="hystmodal hystmodal--simple" id="search-options-modal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window hystmodal__window--form" data-search-options role="dialog" aria-modal="true">
+        <div class="modal modal--search-options">
+          <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
+            <svg class="modal__close-icon" width="18" height="18" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <h2 class="indent-reset hd hd--h2 modal__title">Параметры поиска</h2>
+
+          <div class="modal__search-options">
+
+            <!-- <input type="hidden" data-hotel-id value="168"> -->
+            <div class="location">
+              <p class="indent-reset small location__title">Выберите отели</p>
+              <div class="location__list">
+                <div class="location__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" id="hotel-id-168" data-hotel-id value="168" checked>
+                  <label for="hotel-id-168">Марриотт Красная Поляна</label>
+                </div>
+                <div class="location__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" id="hotel-id-372" data-hotel-id value="372" checked>
+                  <label for="hotel-id-372">Комплекс Апартаментов 540</label>
+                </div>
+                <div class="location__item">
+                  <input class="visually-hidden form__checkbox" type="checkbox" id="hotel-id-5888" data-hotel-id value="5888" checked>
+                  <label for="hotel-id-5888">Комплекс Апартаментов 960</label>
+                </div>
+              </div>
+            </div>
+
+            <label>
+              <span class="small">Выберите количество гостей</span>
+              <select class="form__select" name="Количество гостей" id="count-adult-guest">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </label>
+
+            <div class="add-children">
+              <div class="add-children__list" id="children-guests"></div>
+              <button class="btn-reset btn btn--outlined add-children__btn" type="button" id="add-child-guest">
+                <svg class="add-children__btn-icon" width="16" height="16" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-add"></use>
+                </svg>
+                <span>Добавить ребенка</span>
+              </button>
+            </div>
+
+            <button class="btn-reset btn modal__apply" type="button" data-hystclose>OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<template id="add-child-template">
+  <div class="child-item anim-fade-down">
+    <button class="btn-reset child-item__remove" type="button" title="Удалить" aria-label="Удалить"></button>
+    <label>
+      <span class="small">Возраст ребенка</span>
+      <select class="form__select" name="Ребенок" data-child>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </label>
+  </div>
+</template>

@@ -1,0 +1,27 @@
+.main-about {
+  padding: 40px 0 20px;
+
+  &__top {
+    margin-bottom: 32px;
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($lg) {
+    &__top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 65px 0 20px;
+  }
+}

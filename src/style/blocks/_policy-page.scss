@@ -1,0 +1,83 @@
+.policy-page {
+  & a {
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  & ol {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    list-style: none;
+  }
+
+  & > ol {
+    counter-reset: num;
+
+    & > li {
+      margin: 12px 0;
+      font-weight: 700;
+      counter-increment: num;
+
+      &::before {
+        content: counter(num) '. ';
+      }
+
+      & > ol {
+        counter-reset: num2;
+
+        & > li {
+          margin: 8px 0;
+          font-weight: 400;
+          counter-increment: num2;
+
+          &::before {
+            content: counter(num) '.'counter(num2) '. ';
+          }
+
+          & > ol {
+            counter-reset: num3;
+
+            & > li {
+              margin: 6px 0;
+              counter-increment: num3;
+
+              &::before {
+                content: counter(num) '.'counter(num2) '.'counter(num3) '. ';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.rules-page {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    row-gap: 4px;
+
+    & > li {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--accent);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.location {
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 8px;
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

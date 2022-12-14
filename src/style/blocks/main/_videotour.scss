@@ -1,0 +1,32 @@
+.main-videotour {
+  padding-top: 24px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+  }
+
+  &__video {
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 32px;
+  }
+
+  @include media-min ($lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 40px;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+  }
+}
