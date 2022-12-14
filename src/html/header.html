@@ -42,9 +42,5 @@
       </button>
     </div>
   </div>
-  @if(context.page === 'main') { @include('mobile-menu.html', {"page":"main"}) }
-  @if(context.page === 'apartaments') { @include('mobile-menu.html', {"page":"apartaments"}) }
-  @if(context.page === 'gallery') { @include('mobile-menu.html', {"page":"gallery"}) }
-  @if(context.page === 'contacts') { @include('mobile-menu.html', {"page":"contacts"}) }
-  @if(!context.page) { @include('mobile-menu.html') }
+  @if(context.page === 'main'){ @include('mobile-menu.html', {"page":"main"})}@if(context.page === 'apartaments') { @include('mobile-menu.html', {"page":"apartaments"}) }@if(context.page === 'gallery') { @include('mobile-menu.html', {"page":"gallery"}) }@if(context.page === 'contacts') { @include('mobile-menu.html', {"page":"contacts"}) }@if(!context.page) { @include('mobile-menu.html') }
 </header>
