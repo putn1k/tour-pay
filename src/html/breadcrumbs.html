@@ -1,17 +1,9 @@
-<div class="breadcrumbs">
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
   <div class="container">
-    <div typeof="BreadcrumbList" vocab="https://schema.org/">
-      <span><a href="page-main.html"><span>Главная</span></a></span> /
-      @if(context.page === 'room') {<span><a href="page-apartaments.html"><span>Номера</span></a></span> /}
-      <span><span class="current-item">
-          @if(context.page === 'apartaments') {Номера}
-          @if(context.page === 'gallery') {Галерея}
-          @if(context.page === 'contacts') {Контакты}
-          @if(context.page === 'room') {Название номера}
-          @if(context.page === 'policy') {Политика конфиденциальности}
-          @if(context.page === 'rules') {Правила и условия бронирования}
-          @if(context.page === 'offer') {Отказ от ответственности}
-        </span></span>
-    </div>
+    <span><a href="page-main.html"><span>Главная</span></a></span> /
+    @if(context.page === 'room') {<span><a href="page-apartaments.html"><span>Номера</span></a></span> /}
+    <span><span class="current-item">
+        @if(context.page === 'apartaments') {Номера}@if(context.page === 'gallery') {Галерея}@if(context.page === 'contacts') {Контакты}@if(context.page === 'room') {Название номера}@if(context.page === 'policy') {Политика конфиденциальности}@if(context.page === 'rules') {Правила и условия бронирования}@if(context.page === 'offer') {Отказ от ответственности}
+      </span></span>
   </div>
 </div>
