@@ -25,6 +25,11 @@ const renderResults = ( results, getOptions, hotels, flag, tariffs ) => {
       .cloneNode( true );
     roomNode.querySelector( '.search-room__arrival' ).textContent = getOptions().startDate;
     roomNode.querySelector( '.search-room__departure' ).textContent = getOptions().endDate;
+    roomNode.querySelector( '.search-room__guest' ).textContent = getOptions().adults;
+    ( getOptions().children > 0 ) ?
+    roomNode.querySelector( '.search-room__children' ).textContent = getOptions().children:
+      roomNode.querySelector( '.search-room__children' ).textContent = 'Без детей';
+
     roomNode.querySelector( '.search-room__price-value' ).textContent = formatNumber( `${item[ 0 ].prices.total.prices.RUB}` );
 
     hotels.find( hotel => {

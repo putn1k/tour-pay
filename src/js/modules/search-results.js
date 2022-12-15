@@ -102,14 +102,12 @@ const parseSearchData = ( searchData, hotelData ) => {
 
   if ( searchData.data.hotels.length > 0 ) {
     searchData.data.hotels.forEach( hotel => {
-      // console.log( hotel );
       renderResults( hotel.results, getRequstOptions, hotelData, ( getLocations().length > 1 ), hotel.tariffs );
       resultCounter += hotel.results.length;
       RESULTS.push( ...hotel.results );
     } );
     resultTitleNode.textContent = `Найдено ${resultCounter} ${declineWord(resultCounter,DECLINED_RESULT_WORDS)}`;
     resultTextNode.textContent = 'Выберите подходящий для Вас вариант размещения:';
-    // renderResults( RESULTS, getRequstOptions, hotelData, ( getLocations().length > 1 ) );
     parsePreOrder( getRequstOptions );
   } else {
     resultTitleNode.textContent = 'К сожалению мы не нашли варианты размещения под Ваш запрос';
@@ -155,8 +153,6 @@ const searchVariants = ( evt ) => {
       requestSearchData( Options.Request.API_URL, Options.Request.MethodPost, requestBodyTemplate )
         .then( data => {
           parseSearchData( data, HOTELS_DATA_ARRAY );
-          evt.target.reset();
-          evt.target.querySelector( '#children-guests' ).innerHTML = '';
         } )
         .catch( () => {
           simpleModal.open( '#send-error-modal' );

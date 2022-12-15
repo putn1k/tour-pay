@@ -1,17 +1,25 @@
 .search-room {
-  display: grid;
-  row-gap: 8px;
+  padding: 16px;
   border: 1px solid var(--light-gray);
   border-radius: 6px;
-  padding: 16px;
   transition: box-shadow .15s ease-in-out;
+
+  &__wrapper {
+    display: grid;
+    row-gap: 8px;
+  }
 
   &__hotel {
     margin-bottom: 8px;
   }
 
-  &__label {
+  &__category {
     margin-bottom: 8px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 16px;
   }
 
   &:hover {
@@ -20,20 +28,26 @@
   }
 
   @include media-min ($sm) {
-    justify-items: start;
+    &__wrapper {
+      justify-items: start;
+    }
   }
 
-  @include media-min ($lg) {
-    grid-template-columns: 1fr auto;
+  @include media-min ($md) {
+    &__wrapper {
+      grid-template-columns: 1fr auto;
+    }
 
     &__price {
       grid-column: 2/3;
       grid-row: 1/2;
+      align-self: start;
     }
 
     &__btn {
       grid-column: 2/3;
       grid-row: 2/3;
+      align-self: end;
       justify-self: end;
     }
   }

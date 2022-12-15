@@ -9,16 +9,20 @@
 
 <template id="search-variant-template">
   <li class="search-room">
-    <div class="search-room__title">
-      <h3 class="indent-reset search-room__hotel"></h3>
-      <p class="indent-reset small">Категория номера:<br> <span class="hd hd--h3 search-room__cat"></span></p>
+    <h3 class="indent-reset search-room__hotel"></h3>
+    <p class="indent-reset small search-room__category">Категория номера:<br> <span class="hd hd--h3 search-room__cat"></span></p>
+    <div class="search-room__wrapper">
+      <div>
+        <p class="indent-reset small">Проживание с <span class="search-room__value search-room__arrival"></span> по <span class="search-room__value search-room__departure"></span></p>
+      </div>
+      <div>
+        <p class="indent-reset small">Количество&nbsp;гостей: <span class="search-room__value search-room__guest"></span></p>
+        <p class="indent-reset small">Количество&nbsp;детей: <span class="search-room__value search-room__children"></span></p>
+        <p class="indent-reset small">Питание: <span class="search-room__value search-room__feed"></span></p>
+      </div>
+      <p class="indent-reset small search-room__price">Стоимость: <span class="search-room__value search-room__price-value"></span> руб.</p>
+      <button class="btn-reset btn btn--small search-room__btn" type="button" data-hystmodal="#order-modal">Выбрать</button>
     </div>
-    <div>
-      <p class="indent-reset">Проживание с <span class="search-room__arrival"></span> по <span class="search-room__departure"></span></p>
-      <p class="indent-reset">Питание: <span class="search-room__feed"></span></p>
-    </div>
-    <p class="indent-reset search-room__price">Стоимость: <span class="search-room__price-value"></span> руб.</p>
-    <button class="btn-reset btn btn--small search-room__btn" type="button" data-hystmodal="#order-modal">Выбрать</button>
   </li>
 </template>
 
