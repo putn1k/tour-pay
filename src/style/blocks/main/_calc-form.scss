@@ -1,6 +1,4 @@
 .calc-form {
-  display: grid;
-  gap: 12px;
   max-width: 290px;
   margin: 0 auto;
 
@@ -63,21 +61,12 @@
   }
 
   @include media-min ($lg) {
-    max-width: 720px;
-    gap: 20px;
+    max-width: 850px;
 
     &__wrapper {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-    }
-
-    &__btn {
-      &--submit {
-        padding: 16px 32px;
-        grid-column: span 3;
-        justify-self: center;
-        margin-top: 24px;
-      }
+      align-items: stretch;
     }
   }
 }
