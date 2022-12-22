@@ -7,3 +7,4 @@ import './modules/hinter.js';
 import './modules/full-height.js';
 import './modules/map.js';
 import './modules/room.js';
+import './modules/locations.js';
