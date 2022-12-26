@@ -28,8 +28,8 @@ function openMobileMenu() {
   document.documentElement.classList.add( 'is-open-menu' );
   siteHeaderNode.classList.add( 'header--is-open-menu' );
   addCompensativeYOffset( siteHeaderNode, 'header--abs' );
-  let isExpanded = mobileMenuNode.getAttribute( 'aria-expanded' ) === 'true';
-  mobileMenuNode.setAttribute( 'aria-expanded', !isExpanded );
+  let isShow = mobileMenuNode.getAttribute( 'aria-hidden' ) === 'true';
+  mobileMenuNode.setAttribute( 'aria-hidden', !isShow );
 }
 
 function closeMobileMenu() {
@@ -37,15 +37,15 @@ function closeMobileMenu() {
   document.documentElement.classList.remove( 'is-open-menu' );
   siteHeaderNode.classList.remove( 'header--is-open-menu' );
   removeCompensativeYOffset( siteHeaderNode, 'header--abs' );
-  let isExpanded = mobileMenuNode.getAttribute( 'aria-expanded' ) === 'true';
-  mobileMenuNode.setAttribute( 'aria-expanded', !isExpanded );
+  let isShow = mobileMenuNode.getAttribute( 'aria-hidden' ) === 'true';
+  mobileMenuNode.setAttribute( 'aria-hidden', !isShow );
 }
 
 const initMobileMenu = () => {
   if ( !mobileMenuNode ) return;
   mobileMenuNode.id = MENU_ID;
   document.addEventListener( 'keydown', ( evt ) => {
-    if ( isEscKey( evt ) && mobileMenuNode.getAttribute( 'aria-expanded' ) === 'true' ) {
+    if ( isEscKey( evt ) && mobileMenuNode.getAttribute( 'aria-hidden' ) === 'false' ) {
       siteBurger.close();
     }
   } );

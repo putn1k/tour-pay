@@ -7,7 +7,7 @@
   z-index: 1;
   pointer-events: none;
 
-  &[aria-expanded="true"] {
+  &[aria-hidden="false"] {
     pointer-events: auto;
 
     & .mobile-menu__content {
